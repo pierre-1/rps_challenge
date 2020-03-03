@@ -23,7 +23,7 @@ class Game extends Component {
   render() {
     return (
       <>
-      <h1>Play to score for every win!</h1>
+        <h1>Play to score for every win!</h1>
         <button onClick={event => this.handleMove(event)} value="rock">
           Rock
         </button>
