@@ -8,7 +8,9 @@ class App extends Component {
     playerChoice: "",
     computerChoice: "",
     showMessage: false,
-    results: ""
+    results: "",
+    playerScore: 0,
+    computerScore: 0
   };
 
   handleButtonClick(event) {
