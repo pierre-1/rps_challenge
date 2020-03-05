@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { computerMove, assessGame } from "./gameLogic";
 
+
 class Game extends Component {
   state = {
     playerChoice: "",
@@ -36,7 +37,7 @@ class Game extends Component {
         {this.state.showMessage && (
           <>
             <h3>You chose: {this.state.playerChoice}</h3>
-            <h3>Computer chose: {this.state.botChoice}</h3>
+            <h3>Computer chose: {this.state.computerChoice}</h3>
             <h2>{this.state.results}</h2>
           </>
         )}

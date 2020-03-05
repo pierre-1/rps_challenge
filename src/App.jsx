@@ -1,9 +1,7 @@
 import "./App.css";
 import React, { Component } from "react";
 import { computerMove, assessGame } from "./gameLogic";
-import rock from "./rock.png";
-import paper from "./paper.png";
-import scissors from "./scissors.png";
+import { Button } from 'semantic-ui-react'
 
 class App extends Component {
   state = {
@@ -27,27 +25,27 @@ class App extends Component {
   render() {
     return (
       <>
-        <title>Play Rock Paper Scissors!</title>
-        <img
-          src={rock}
+        <center><div>
+        <h1>Play Rock Paper Scissors!</h1>
+        <h2>Click to play</h2>
+        <Button id="rock"
           onClick={event => this.handleButtonClick(event)}
-          name="rock"
-        />
-        <img
-          src={paper}
+          name="rock">rock
+        </Button>
+        <Button id="paper"
           onClick={event => this.handleButtonClick(event)}
-          name="paper"
-        />
-        <img
-          src={scissors}
+          name="paper">paper
+        </Button>
+        <Button id="scissors"
           onClick={event => this.handleButtonClick(event)}
-          name="scissors"
-        />
+          name="scissors">scissors
+        </Button>
+        </div></center>
         {this.state.showMessage && (
-          <>
+          <center><>
             <h3>{`You chose ${this.state.playerChoice}, computer chose ${this.state.computerChoice}`}</h3>
             <h1>{this.state.results}</h1>
-          </>
+          </></center>
         )}
       </>
     );
