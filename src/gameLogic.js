@@ -27,4 +27,9 @@ const assessGame = (player1, player2) => {
   return result;
 };
 
-export { computerMove, assessGame };
+const totalscores = (playerWins, playerScore, computerScore) => {
+  let score = assessGame() === playerWins ? playerScore + 1 : computerScore + 1;
+  return score
+}
+
+export { computerMove, assessGame, totalscores };

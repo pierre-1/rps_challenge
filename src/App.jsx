@@ -1,26 +1,29 @@
 import "./App.css";
 import React, { Component } from "react";
-import { computerMove, assessGame } from "./gameLogic";
+import { computerMove, assessGame, totalscores} from "./gameLogic";
 import { Button } from 'semantic-ui-react'
 
 class App extends Component {
   state = {
     playerChoice: "",
     computerChoice: "",
-    showMessage: false,
     results: "",
     playerScore: 0,
-    computerScore: 0
+    computerScore: 0,
+    score: null,
+    showMessage: false
   };
 
   handleButtonClick(event) {
     let playerChoice = event.target.name;
     let computerChoice = computerMove();
+    let score = totalscores()
     this.setState({
       playerChoice: playerChoice,
       computerChoice: computerChoice,
       showMessage: true,
-      results: assessGame(playerChoice, computerChoice)
+      results: assessGame(playerChoice, computerChoice),
+      score: score
     });
   }
 
@@ -53,5 +56,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;
