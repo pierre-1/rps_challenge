@@ -1,4 +1,8 @@
 # RPS Challenge
+
+## Deployed site
+https://pierrerps.netlify.com
+
 ## User stories
 
 As a user
