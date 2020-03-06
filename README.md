@@ -16,11 +16,6 @@ I need to see the result
 ## Directive
 "In order to assess your coding skills, we want you to accept an programming challenge as part of the hiring process. Your challenge is to build a Rock, Paper, Scissors game."
 
-Instructions
--------
-
-### Tasks
-----
 ## Dependencies
 | React | Yarn | Semantic UI | Chance.js |
 
